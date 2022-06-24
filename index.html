@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flexbox</title>
+</head>
+
+<body>
+	<style>
+		@media (min-width: 800px) {
+			.link{
+				font-style: bold;
+				font-family: sans-serif;
+				color: gray;
+				margin-top: 15%;
+				margin-left: 10%;
+				display: inline-block;
+			}
+			nav {
+				display: flex;
+				flex-direction: row;
+				border: 5px solid gray;
+				justify-content: space-evenly;
+			}
+
+			nav>div {
+				margin-top: 10px;
+				border: 5px solid gray;
+				margin-bottom: 10px;
+				height: 40vh;
+				width: 45vw;
+				padding: 1%;
+
+
+			}
+
+			.right {
+				height: 40vh;
+				width: 45vw;
+				/* display: flex; */
+				padding: 1%;
+			}
+
+			.navbar {
+				display: flex;
+				border: 1px solid gray;
+				flex-direction: row;
+				width: 96%;
+				padding: 2%;
+				height: 10vh;
+
+			}
+
+			.navbar>ul {
+				list-style: none;
+				border: 1px solid gray;
+				width: 60%;
+				height: 9.5vh;
+				margin: 0;
+
+			}
+			.navbar>ul>li {
+				width: 60%;
+				height: 40%;
+				font-style: bold;
+				font-family: sans-serif;
+				font-size: 40px;
+				margin-top: 5%;
+				color: gray;
+
+			}
+
+			.navbar>.btns {
+				width: 25%;
+				margin-left: 8%;
+				display: flex;
+				border: 1px solid gray;
+			}
+
+			.navbar>.btns>.btn {
+				border-radius: 50%;
+				margin: 7% 3%;
+				width: 85%;
+				height: 70%;
+				border: 1px solid gray;
+			}
+			.h3box{
+				border: 1px solid gray;
+				width: 100%;
+				height: 24vh;
+				margin-top: 2.5%;
+				font-style: bold;
+				font-family: sans-serif;
+				font-size: 40px;
+				margin-top: 5%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 10%;
+				color: gray;
+			}
+			.bottom{
+				border: 1px solid gray;
+				height: 45vh;
+				margin-top: 3vh;
+				display: flex;
+				justify-content: space-evenly;
+			}
+			.bottom>.para{
+			border: 1px solid gray;
+			height: 10vh;
+				width: 47vw;
+				margin-top: 33vh;
+				display: flex;
+				justify-content:flex-start;
+
+			}
+			.bottom>div{
+				border: 1px solid gray;
+				height: 10vh;
+				width: 47vw;
+				margin-top: 33vh;
+				display: flex;
+				justify-content: center;
+
+			}
+			.bottom>div>div{
+				border: 4px solid gray;
+				height: 6vh;
+				width: 15vw;
+				margin-top: 2vh;
+				margin-left: 2%;
+			}
+			.bottom>div>span{
+				font-style: bold;
+				font-family: sans-serif;
+				font-size: 40px;
+				margin-top: 5%;
+				color: gray;
+				margin-left: 10%;
+			}
+			.btn3{
+				display: none;
+			}
+		}
+		@media (max-width: 800px) and (min-width:450px) {
+			.link{
+				font-style: bold;
+				font-family: sans-serif;
+				color: gray;
+				margin-top: 15%;
+				margin-left: 10%;
+				display: inline-block;
+			}
+			nav {
+				display: flex;
+				flex-direction: row;
+				border: 5px solid gray;
+				justify-content: center;
+			}
+
+			nav>div {
+				margin-top: 10px;
+				border: 5px solid gray;
+				border-right:none ;
+				margin-bottom: 10px;
+				margin-right: 0%;
+				height: 40vh;
+				width: 43vw;
+				padding: 1%;
+				
+				
+			}
+			
+			.right {
+				height: 40vh;
+				margin-left: 0%;
+				width: 43vw;
+				border: 5px solid gray;
+				border-left: none;
+				/* display: flex; */
+				padding: 1%;
+			}
+
+			.navbar {
+				display: flex;
+				border: 1px solid gray;
+				flex-direction: row;
+				width: 96%;
+				padding: 2%;
+				height: 10vh;
+				justify-content:flex-end ;
+
+			}
+
+			.navbar>ul {
+				list-style: none;
+				border: 1px solid gray;
+				width: 60%;
+				height: 9.5vh;
+				margin: 0;
+				display: none;
+
+			}
+			.navbar>ul>li {
+				width: 60%;
+				height: 40%;
+				font-style: bold;
+				font-family: sans-serif;
+				font-size: 40px;
+				margin-top: 5%;
+				color: gray;
+
+			}
+
+			.navbar>.btns {
+				width: 40%;
+				margin-left: 8%;
+				display: flex;
+				border: 1px solid gray;
+			}
+
+			.navbar>.btns>.btn {
+				border-radius: 50%;
+				margin: 7% 3%;
+				width: 100%;
+				height: 70%;
+				border: 1px solid gray;
+			}
+			.h3box{
+				border: 1px solid gray;
+				width: 200%;
+				height: 26vh;
+				font-style: bold;
+				font-family: sans-serif;
+				font-size: 40px;
+				margin-top: 5%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 10%;
+				margin-left: -102%;
+				color: gray;
+			}
+			.bottom{
+				border: 1px solid gray;
+				height: 45vh;
+				margin-top: 3vh;
+				display: flex;
+				justify-content: space-evenly;
+			}
+			.bottom>.para{
+			border: 1px solid gray;
+			height: 10vh;
+				width: 45vw;
+				margin-top: 33vh;
+				display: flex;
+				justify-content:flex-start;
+
+			}
+			.bottom>div{
+				border: 1px solid gray;
+				height: 10vh;
+				width: 45vw;
+				margin-top: 33vh;
+				display: flex;
+				justify-content: center;
+
+			}
+			.bottom>div>div{
+				border: 4px solid gray;
+				height: 6vh;
+				width: 15vw;
+				margin-top: 2vh;
+				margin-left: 2%;
+			}
+			.bottom>div>span{
+				font-style: bold;
+				font-family: sans-serif;
+				font-size: 5vw;
+				margin-top: 5%;
+				color: gray;
+				margin-left: 10%;
+			}
+		}
+		@media (max-width: 450px) and (min-width:2px) {
+			.link{
+				font-style: bold;
+				font-family: sans-serif;
+				color: gray;
+				margin-top: 15%;
+				font-size: 80%;
+				margin-left: 3%;
+				display: inline-block;
+			}
+			nav {
+				display: flex;
+				flex-direction: row;
+				border: 5px solid gray;
+				justify-content: center;
+				height: 30vh;
+			}
+
+			nav>div {
+				margin-top: 10px;
+				border: 5px solid gray;
+				border-right:none ;
+				margin-bottom: 10px;
+				margin-right: 0%;
+				height: 25vh;
+				width: 41vw;
+				padding: 1%;
+				
+				
+			}
+			
+			.right {
+				height: 25vh;
+				margin-left: 0%;
+				width: 41vw;
+				border: 5px solid gray;
+				border-left: none;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				padding: 1%;
+			}
+
+			.navbar {
+				display: flex;
+				border: 1px solid gray;
+				flex-direction: row;
+				width: 80%;
+				padding: 2%;
+				height: 7vh;
+				justify-content:flex-end ;
+
+			}
+
+			.navbar>ul {
+				list-style: none;
+				border: 1px solid gray;
+				width: 60%;
+				height: 7vh;
+				margin: 0;
+				display: none;
+
+			}
+			.navbar>ul>li {
+				width: 60%;
+				height: 40%;
+				font-style: bold;
+				font-family: sans-serif;
+				font-size: 40px;
+				margin-top: 5%;
+				color: gray;
+
+			}
+
+			.navbar>.btns {
+				width: 100%;
+				margin-left: 8%;
+				padding: 0% 2%;
+				display: flex;
+				border: 1px solid gray;
+			}
+
+			.navbar>.btns>.btn {
+				border-radius: 50%;
+				margin: 7% 3%;
+				width: 100%;
+				height: 70%;
+				border: 1px solid gray;
+			}
+			.h3box{
+				border: 1px solid gray;
+				width: 200%;
+				height: 15vh;
+				font-style: bold;
+				font-family: sans-serif;
+				font-size: 40px;
+				margin-top: 5%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 2%;
+				margin-left: -102%;
+				color: gray;
+			}
+			.bottom{
+				border: 1px solid gray;
+				height: 45vh;
+				margin-top: 2vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items:center;
+			}
+			.bottom>.para{
+			border: 1px solid gray;
+			height: 7vh;
+				width: 90vw;
+				margin-top: 27vh;
+				display: flex;
+				justify-content:center;
+
+			}
+			.bottom>div{
+				border: 1px solid gray;
+				height: 7vh;
+				width: 90vw;
+				margin-top: 1vh;
+				display: flex;
+				justify-content: center;
+
+			}
+			.bottom>div>div{
+				border: 4px solid gray;
+				height: 4vh;
+				width: 30vw;
+				margin-top: 2%;
+				margin-left: 2%;
+			}
+			.bottom>div>span{
+				font-style: bold;
+				font-family: sans-serif;
+				font-size: 5vw;
+				margin-top: 5%;
+				color: gray;
+				margin-left: 10%;
+			}
+		}
+	</style>
+	<nav>
+		<div><span class="link">htts://www.flyhyer.com/</span></div>
+		<div class="right">
+			<div class="navbar">
+				<ul>
+					<li>UL</li>
+		<!-- <li></li>
+		<li></li> -->
+				</ul>
+				<div class="btns">
+					<div class="btn"></div>
+					<div class="btn"></div>
+					<div class="btn btn3"></div>
+				</div>
+			</div>
+			<div class="h3box">
+H3 box
+			</div>
+		</div>
+	</nav>
+
+
+
+
+<div class="bottom">
+	<div class="para"><span>Paragraph elem</span></div>
+	<div class="footlink">
+		<div></div>
+		<div></div>
+	</div>
+</div>
+
+</body>
+
+</html>
